@@ -142,3 +142,46 @@ studySession.room = 'Lab 3'
 console.log(`${studySession.title} will take place in ${studySession.room}.`)
 //Log the topics. Expected topics after the update:
 console.log(studySession.topics)
+console.log('========Excersie 9========')
+const products = [
+  { name: 'Tea', price: 2 },
+  { name: 'Sandwich', price: 4 },
+  { name: 'Cookie', price: 1 },
+];
+//Log the name of the second product.
+console.log(`${products[1].name}`)
+//Change the second product’s price to 5
+products[1].price = 5
+//Use push() to add this product:
+products.push({ name: 'Juice', price: 3 })
+//Use a for loop or forEach() to print every product in this format:
+products.forEach(product => {
+    console.log(`${product.name} - ${product.price}`)
+});
+console.log('========Excersie 10========')
+const studyGroup = {
+  name: 'JavaScript Crew',
+  members: [
+    { name: 'Aisha', completedHomework: true },
+    { name: 'Omar', completedHomework: false },
+    { name: 'Noor', completedHomework: true },
+  ],
+};
+//Log the group name.
+console.log(`${studyGroup.name}`)
+//Log the number of members.
+console.log(studyGroup.members.length)
+//Create a variable named completedCount, starting at 0.
+let completedCount = 0
+//Loop through studyGroup.members.
+for (const member of studyGroup.members){
+//For each member:If they completed their homework, increase completedCount.
+if (member.completedHomework) {
+    completedCount++
+} else {
+// Otherwise, print their name in a reminder message.
+    console.log(`${member.name} needs to finish the homework.`)
+}
+}
+//completed homework
+console.log(`Completed homework: ${completedCount}`)
