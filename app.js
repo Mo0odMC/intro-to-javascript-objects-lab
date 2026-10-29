@@ -185,3 +185,48 @@ if (member.completedHomework) {
 }
 //completed homework
 console.log(`Completed homework: ${completedCount}`)
+
+console.log('========Level up========')
+console.log('========Excersie 11========')
+
+//Write a function named calculateTotal with one parameter named itemPrices
+function calculateTotal (itemPrices) {
+    let total = 0
+    for (let i = 0; i < itemPrices.length; i++) {
+        total += itemPrices[i];
+    } return total
+}
+
+console.log(calculateTotal([2, 5, 3])); // 10
+console.log(calculateTotal([4, 4]));    // 8
+console.log(calculateTotal([7]));       // 7
+console.log(calculateTotal([]));        // 0
+
+console.log('========Excersie 12========')
+const bill = {
+  customerName: 'Noor',
+  items: [
+    { name: 'Tea', price: 2, quantity: 2 },
+    { name: 'Sandwich', price: 4, quantity: 1 },
+    { name: 'Cookie', price: 1, quantity: 3 },
+  ],
+  getTotal (){
+    total = 0
+
+    for (const item of this.items) {
+      total += item.price * item.quantity;
+    }
+    return total
+}
+
+};
+console.log(bill.getTotal()); // 11
+
+bill.items.push({
+  name: 'Water',
+  price: 1,
+  quantity: 2,
+});
+
+console.log(bill.getTotal()); // 13
+
